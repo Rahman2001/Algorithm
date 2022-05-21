@@ -3,6 +3,7 @@ package Algorithms; //////////////////////////////////    HEAPSORT  ////////////
 // 1) half of the array are parent nodes and other ones are leaves of a tree
 // 2) the parent nodes must be always have higher value than its child nodes
 // 3) the construction of tree for mapHeap starts from the half index of array and decrements to the zero because of the rule 1)
+// 4) Time Complexity of algorithm: ( Best, Average, Worst Case: O(n*log(n)) )
 
 import java.util.Arrays;
 
