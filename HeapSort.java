@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms; //////////////////////////////////    HEAPSORT  /////////////////////////////////////////////
 // remember that there are some rules for maxHeap:
 // 1) half of the array are parent nodes and other ones are leaves of a tree
 // 2) the parent nodes must be always have higher value than its child nodes
