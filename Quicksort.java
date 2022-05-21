@@ -6,6 +6,7 @@ package Algorithms;  ///////////////////////////////////    QUICKSORT //////////
 // 4) both pointers swap each other's value to continue to move
 // 5) if both pointers are on the same index of the given array, then leftPointer's value and the pivot are swapped with each other
 // 6) the process starts from the beginning by sorting the left side of the pivot and the right side of the pivot recursively until there is no element to sort
+// 7) Time comlexity of algorithm: ( Best, Average Case: O(n*log(n))   and   Worst Case: O(n^2) )
 
 import java.util.Arrays;
 
