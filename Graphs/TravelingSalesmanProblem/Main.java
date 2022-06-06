@@ -36,7 +36,9 @@ public class Main {
             System.out.println(" = " + possiblePaths.stream().mapToInt(Vertex::getWeight).sum());
         }
         System.out.println("\nThis is the shortest path of the graph:--------------");
-        List<Vertex> shortestPath = tsp.findShortestPath();
-        System.out.println(shortestPath);
+        List<List<Vertex>> shortestPaths = tsp.findShortestPath();
+        for(List<Vertex> shortestPath : shortestPaths) {
+            System.out.println(shortestPath);
+        }
     }
 }
