@@ -29,8 +29,9 @@ public class TSP {
         this.exploreTheGraph(graph, 0, 0);
     }
 
-    public List<Vertex> findShortestPath() { // finds the shortest way among all possible ways
+    public List<List<Vertex>> findShortestPath() { // finds the shortest way among all possible ways
         int[] totalWeightForEachWay = new int[this.getPossibleWays().size()];
+        List<List<Vertex>> shortestPaths = new ArrayList<>();
 
         if(this.possibleWays.size() != 0) {
             for (int i = 0; i < this.possibleWays.size(); i++) { // sums all weights of each possible way and inserts into the int array
@@ -47,9 +48,10 @@ public class TSP {
                     totalWeight += vertex.getWeight();
                 }
                 if (totalWeight == shortestPathWeight) { // if the total weight in the list matches with the shortest weight, return that list of path
-                    return possibleWay;
+                    shortestPaths.add(possibleWay);
                 }
             }
+            return shortestPaths;
         }
         System.out.println("""
 
@@ -60,6 +62,7 @@ public class TSP {
 
         return null; // if there is nothing to return, then it returns null.
     }
+
 
     public Vertex[][] getRandomGraph(int vertexNumber) { // creates a random graph based on the vertex number
         Vertex[] vertices = new Vertex[vertexNumber];
